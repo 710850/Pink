@@ -1,0 +1,399 @@
+/*variables*/
+
+@light-blue: #81b3d2;
+
+@blue: #669ec0;
+
+@dark-blue: #5496bd;
+
+@light-brown: @brown + #161514;
+
+@brown: #604e43;
+
+@dark-brown: @brown - #101010;
+
+@black: #000;
+
+@white: #fff;
+
+@benefit-bg: #fff;
+
+@benefit-bg-2: #eee;
+
+@border-color: #ebebeb;
+
+@input-bg: @benefit-bg-2;
+
+@input-border: @benefit-bg-2;
+
+@opacity-30: .3;
+
+@font: "PTSansRegular";
+
+@font-bold: "PTSansBold";
+
+@font-size: 14px;
+
+@font-size-title: 21px;
+
+@font-size-title-big: 30px;
+
+@line-height: 26px;
+
+@font-family: @font, sans-serif, arial;
+
+@font-family-bold: @font-bold, sans-serif, arial;
+
+/*variables end*/
+
+
+/*general styles start*/
+
+body{
+  font-size: @font-size;
+  line-height: @line-height;
+  font-family: @font, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @black;
+  min-width: 1200px;
+}
+
+
+@font-face {
+  font-family: PTSansBold;
+  src: url("../fonts/ptsansbold.woff");
+}
+
+@font-face {
+  font-family: PTSansRegular;
+  src: url("../fonts/ptsans.woff");
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/*general styles end*/
+
+/*main-header*/
+
+.main-header {
+
+  &__container{
+    max-width: 1200px;
+
+  }
+  
+  &__mini-logo{
+    background: url("../img/sedona_minilogo_1280.PNG") no-repeat center;
+    position: absolute;
+    height: 70px;
+    width: 138px;
+    left: 50%;
+    margin-left: -69px;
+    top: 0;
+  }
+
+  &__navigation-list {
+    padding: 15px 80px;
+
+      li{
+      display: inline-block;
+    }
+  }
+
+  &__list-item--left{
+    float: left;
+    margin-right: 140px;
+  }
+
+  &__list-item--right{
+    float: right;
+    margin-left: 140px;
+  }
+}
+
+.main-container {
+  &__container {
+    max-width: 1200px;
+  }
+
+  &__logo {
+    background: url("../img/sedona_bg.jpg") #daeaf3 no-repeat center;
+    width: 1200px;
+    height: 595px;
+    margin-bottom: 55px;
+  }
+
+  &__title {
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    padding: 0 360px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__benefit-vista {
+    height: 240px;
+  }
+
+  &__benefit-color {
+    width: 400px;
+    height: 240px;
+    background: @light-blue;
+    float: left;
+    vertical-align: top;
+  }
+
+  &__benefit-color-number {
+    text-align: center;
+    display: block;
+    margin-bottom: 25px;
+    color: @white;
+  }
+
+  &__title-color {
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    color: @white;
+    text-align: center;
+    margin: 50px 0 15px;
+  }
+
+  &__paragraph-color {
+    padding: 0 65px;
+    text-align: center;
+    font-family: @font-family;
+    color: @white;
+  }
+
+  &__vista {
+    width: 800px;
+    height: 240px;
+    float: left;
+    vertical-align: top;
+  }
+
+
+  &__benefit-detail-item{
+    width: 400px;
+    height: 330px;
+    float: left;
+    text-align: center;
+    background: @benefit-bg;
+  }
+
+  &__benefit-title{
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    margin-bottom: 30px;
+  }
+  
+  &__benefit-image{
+    margin: 60px auto 30px;
+  }
+
+  &__benefit-title-2 {
+    margin: 45px auto 15px;
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+  }
+
+  &__benefit-number{
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+    color: @black;
+  }
+
+  &__benefit-detail-item-2 {
+    width: 400px;
+    height: 255px;
+    float: left;
+    text-align: center;
+    background: @benefit-bg-2;
+
+  }
+
+  &__map-section{
+  }
+
+  &__map-title{
+    font-size: @font-size-title-big;
+    text-align: center;
+    margin: 50px 0 40px;
+  }
+
+  &__map-paragraph{
+    font-size: @font-size;
+    line-height: @line-height;
+    text-align: center;
+    margin-bottom: 130px;
+  }
+
+  &__map-item{
+       width: 100%;
+
+     }
+
+
+
+}
+
+.main-footer{
+
+
+  &__container{
+    max-width: 1200px;
+    margin: 35px auto;
+  }
+
+  &__hashtag{
+    font-size: @font-size-title;
+  line-height: 48px;
+    margin-left: 130px;
+    float: left;
+  }
+
+  &__social-section{
+    position: absolute;
+    left: 45%;
+  }
+
+  &__social-btn{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: @light-blue no-repeat center;
+    margin-right: 6px;
+    float: left;
+
+    &:hover{
+      background-color: @blue ;
+    }
+
+    &:target {
+      background-color: @dark-blue;
+    }
+
+    &--tv-bg{
+      background-image: url("../img/icon-twitter.svg");
+    }
+    
+    &--fb-bg{
+      background-image: url("../img/icon-facebook.svg");
+    }
+    
+    &--ut-bg{
+      background-image: url("../img/icon-youtube.svg");
+    }
+  }
+
+  &__designed-section{
+    float: right;
+    margin-right: 150px;
+    line-height: 48px;
+  }
+
+  &__footer-logos{
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+
+}
+
+.popup-window{
+  margin: 0 auto;
+  width: 568px;
+  bottom: 100px;
+  height: 500px;
+
+  &__title {
+    width: 568px;
+    font-family: @font-family-bold;
+    font-size: @font-size-title-big;
+    line-height: @line-height;
+    color: @white;
+    padding: 30px 30px;
+    text-align: center;
+    background: @light-brown;
+
+  }
+
+  &__booking-form{
+    font-family: @font-family;
+    font-size: @font-size;
+    line-height: @line-height;
+    color: @black;
+    margin-top: 65px;
+  }
+
+  &__input-label{
+    float: left;
+    margin-left: 55px;
+    line-height: 32px;
+  }
+
+  &__calendar-icon{
+    float: right;
+    margin-right: 60px;
+    line-height: 32px;
+    vertical-align: bottom;
+    cursor: pointer;
+
+    img{
+      vertical-align: middle;
+    }
+  }
+
+  &__input-date{
+    width: 280px;
+    padding: 5px;
+    float: right;
+    margin-right: 30px;
+    border: solid 2px transparent;
+    cursor: pointer;
+
+    &:hover{
+      background: @input-bg;
+    }
+
+    &:active{
+      border: 2px solid @input-border;
+      background: transparent;
+    }
+  }
+
+
+  &__booking-row{
+    margin-bottom: 55px;
+  }
+
+  &__adult-quantity{
+    width: 80px;
+    padding: 5px;
+    float: left;
+    margin-left: 50px;
+    border: solid 2px transparent;
+    cursor: pointer;
+  }
+
+  &__adult-quantity:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon-plus.svg") -5px -5px;
+  }
+}
+

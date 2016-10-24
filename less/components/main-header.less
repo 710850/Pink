@@ -1,0 +1,184 @@
+/*
+mobile first
+*/
+
+  .main-header {
+
+    background: @menu-bg-color;
+
+
+    &__container{
+      width: 100%;
+      min-width: 320px;
+      padding: 0;
+    }
+
+    &__icon-menu {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+      border: none;
+      background: transparent;
+      fill: @menu-font-color;
+    }
+
+    &__navigation-list {
+      padding: 0;
+
+
+
+      li {
+
+
+
+
+
+        a {
+          color: @menu-font-color;
+          line-height: 55px;
+        }
+      }
+    }
+
+    &__list-item {
+      position: relative;
+
+      background: @menu-bg-color;
+      text-align: center;
+      border-top: 1px solid @border-color;
+
+      &:last-of-type{
+        margin-right:0;
+      }
+
+
+          a{
+            color: @icon-regular-color;
+          }
+   
+      }
+
+      &--active-link {
+        &:hover {
+          a {
+            color: @menu-font-color;
+          }
+        }
+      }
+
+      &--na{
+        &:hover {
+
+          a {
+
+
+            &:active {
+
+            }
+          }
+        }
+      }
+
+    }
+
+
+
+/*
+tablet style
+*/
+
+@media ( min-width: 768px) {
+
+  .main-header {
+
+
+    &__navigation {
+      position: relative;
+    }
+
+    &__navigation-list {
+      padding: 0;
+
+    }
+
+    &__list-item{
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+
+  /*
+  desktop style
+  */
+  @media ( min-width: 1200px) {
+
+    .main-header {
+      padding: 0 10%;
+      display: flex;
+      align-items: center;
+      height: 110px;
+
+      &__navigation{
+        display: flex;
+        justify-content: space-between;
+
+      }
+
+      &__logo{;
+
+      }
+
+      &__navigation-list {
+        display: flex;
+      }
+
+      &__icon-menu{
+        display: none;
+      }
+
+      &__list-item {
+        margin-right: 60px;
+        border: none;
+
+
+        a {
+          &:hover {
+
+          }
+
+          &:active {
+
+          }
+        }
+
+        &--active-link {
+          a {
+
+            &:hover {
+
+              cursor: default;
+
+              &:active {
+
+              }
+            }
+          }
+        }
+
+        &--na {
+          a {
+            opacity: .3;
+            cursor: default;
+            &:hover {
+
+            }
+          }
+        }
+      }
+
+         }
+  }
+}
+
+

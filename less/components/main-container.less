@@ -1,0 +1,433 @@
+.main-container {
+
+
+
+  &__container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__menu{
+    display: none;
+  }
+
+  &__logo {
+    background:
+            url("../img/bg-promo-mask.png") no-repeat 50% 100%,
+            url("../img/photo-background@1x.jpg") no-repeat 50% 0;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 55px;
+    padding-top: 77px;
+
+    @media (min-resolution: 1.5dppx) {
+      background:
+              url("../img/bg-promo-mask.png") no-repeat 100% 100%,
+              url("../img/photo-background@2x.jpg");
+      background-size: 100%;
+    }
+  }
+	 &__promo *{
+		  display: block;
+		  margin: 0 auto;
+	 }
+
+  &__promo-welcome{
+    margin-bottom: 15px;
+    fill: @light-blue;
+  }
+
+  &__promo-gorgeous{
+    fill: @light-brown;
+    margin-bottom: 55px;
+  }
+
+  &__promo-sedona{
+    fill: @white;
+    margin-bottom: 65px;
+  }
+
+  &__promo-because{
+    fill: @white;
+  }
+
+  &__mini-logo{
+    text-align: center;
+    position: absolute;
+    height: 70px;
+    width: 138px;
+    left: 50%;
+    margin-left: -70px;
+    top: 0;
+    z-index:2;
+
+
+      &::after{
+        content: "";
+        position: absolute;
+        top: -71%;
+        left: 85%;
+        margin-left: -98px;
+        width: 0;
+        height: 0;
+        z-index:-4;
+        border-top: 50px solid ;
+        border-left: 50px solid ;
+        border-bottom: 50px solid ;
+        border-right: 50px solid ;
+        border-color: @light-blue @light-blue transparent transparent;
+        border-top-right-radius: 10px;
+        transform: rotate(135deg);
+    }
+
+    &:hover {
+      &::after {
+        border-color: @dark-blue @dark-blue transparent transparent;
+      }
+    }
+
+    img{
+      z-index: 4;
+    }
+
+  }
+
+  &__title {
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    padding: 0 30%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__benefit-vista {
+    height: 240px;
+  }
+
+  &__benefit-color {
+    width: 33.3%;
+    height: 240px;
+    background: @light-blue;
+    float: left;
+    vertical-align: top;
+    padding: 40px 5.4% 45px;
+    text-align: center;
+
+    &--float-right{
+      float: right;
+    }
+  }
+
+  &__benefit-color-number {
+    display: block;
+    color: @white;
+    margin-bottom: 15px;
+    line-height: @line-height-text;
+  }
+
+  &__title-color {
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    color: @white;
+    margin-bottom: 10px;
+  }
+
+  &__paragraph-color {
+    font-family: @font-family;
+    color: @white;
+    line-height: @line-height-text;
+  }
+
+
+
+  &__benefit-photo{
+    width: 66.7%;
+    height: 240px;
+    float: left;
+    vertical-align: top;
+    background-size: cover;
+
+    &--bridge{
+      background: url("../img/photo-bridge@1x.jpg") no-repeat center;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/photo-bridge@2x.jpg");
+      }
+    }
+
+    &--city{
+      background: url("../img/photo-city@1x.jpg") no-repeat center;
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/photo-city@2x.jpg");
+      }
+    }
+  }
+
+  &__benefit-detail-item{
+    width: 33.3%;
+    height: 330px;
+    float: left;
+    text-align: center;
+    background: @benefit-bg;
+    padding: 60px 5% 80px;
+  }
+
+  &__benefit-paragraph{
+    line-height: @line-height-text;
+  }
+
+  &__benefit-image{
+    fill: @light-blue;
+  }
+
+  &__benefit-title{
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    line-height: 75px;
+  }
+  
+
+
+  &__benefit-title-2 {
+    margin-bottom: 15px;
+    font-family: @font-family-bold;
+    font-size: @font-size-title;
+    padding: 0 22%;
+
+  }
+
+  &__benefit-number{
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    color: @black;
+  }
+
+  &__benefit-detail-item-2 {
+    width: 33.33%;
+    height: 255px;
+    float: left;
+    text-align: center;
+    background: @benefit-bg-2;
+    padding: 45px 5% 65px;
+    position: relative;
+  }
+
+  &__benefit-paragraph-2 {
+    line-height: @line-height-text;
+  }
+
+  &__map-title{
+    font-size: @font-size-title-big;
+    text-align: center;
+    margin: 50px 0 40px;
+  }
+
+  &__map-paragraph{
+    font-size: @font-size;
+    line-height: @line-height;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__map-item{
+       width: 100%;
+  }
+
+  &__map-wrap{
+    background: url("../img/map.jpg") no-repeat center;
+    height: 480px;
+  }
+}
+
+/*
+tablet style
+*/
+
+
+@media ( max-width: 1280px) {
+
+
+	.main-container {
+
+	  &__menu-wrap{
+		display: none;
+		padding: 17px 2.86%;
+	  }
+
+	  &__menu{
+		display: block;
+		float: right;
+		fill: @light-blue;
+	  }
+
+	  &__title{
+		padding: 0 160px;
+
+	  }
+
+	  &__benefit-color {
+		width: 33.3%;
+		height: 240px;
+	  }
+	}
+}
+
+/*
+phone style
+*/
+
+
+@media(max-width: 768px) {
+  
+  .main-container{
+
+    &__container{
+      width: 100%;
+      min-width: 320px;
+    }
+
+    &__menu-wrap{
+      height: 55px;
+      display: block;
+    }
+
+   &__logo{
+     width: 100%;
+     height: 391px;
+     margin-bottom:45px;
+     clear: both;
+     position: relative;
+     padding-top: 45px;
+     background:
+             url("../img/bg-promo-mask.png") no-repeat 50% 100%,
+             url("../img/photo-background@1x.jpg") no-repeat 50% 0;
+   }
+
+    &__promo-welcome{
+      width: 50%;
+      height: 39px;
+    }
+
+    &__promo-gorgeous{
+      width: 62%;
+      height: 25px;
+    }
+
+    &__promo-sedona{
+      width: 87%;
+      height: 39px;
+    }
+
+    &__promo-because{
+      width: 62%;
+      height: 57px;
+    }
+
+    &__mini-logo{
+      top: 100%;
+      }
+
+    &__paragraph{
+      margin-bottom: 30px;
+    }
+
+    &__title{
+      padding: 0;
+    }
+
+    &__benefit-color{
+      width: 100%;
+      height: 190px;
+      padding: 45px 40px 40px;
+
+      &--mask{
+        background: url("../img/features-mask.png") no-repeat 50% 0,
+        @light-blue;
+        height: 210px;
+        padding: 70px 40px 20px;
+      }
+    }
+
+    &__benefit-photo{
+      width: 100%;
+      min-height: 257px;
+    }
+
+    &__benefit-detail-group-1{
+      padding: 30px 40px 40px 20px;
+    }
+
+    &__benefit-detail-item{
+      text-align: left;
+      padding: 0;
+      width: 100%;
+      height: 120px;
+    }
+
+    &__benefit-paragraph{
+      margin-left: 50px;
+    }
+
+    &__benefit-image{
+      width: 36px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    &__benefit-title{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    &__benefit-detail-item-2{
+      width: 100%;
+      height: 170px;
+      padding: 25px 1.56% 0;
+
+      &::after{
+        content: '';
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 4%;
+        border-bottom: 2px solid @border-color;
+      }
+    }
+
+    &__benefit-title-2{
+      padding: 0;
+    }
+
+    &__benefit-paragraph-2{
+      line-height: 20px;
+      margin: 0 20px;
+    }
+
+    &__map-title{
+      font-size: @font-size-title;
+    }
+    
+    &__map-paragraph{
+      line-height: 20px;
+    }
+
+    &__map-wrap{
+      height: 360px;
+    }
+  }
+}
+
+
+
+
+

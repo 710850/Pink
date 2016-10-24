@@ -1,0 +1,489 @@
+.inner-page{
+
+  &__container{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__filter{
+    padding: 25px 6.6% 30px;
+    background: url("../img/fiter-bg.JPG") no-repeat 100% 75%;
+  }
+
+  &__filter-group-wrap{
+    float: left;
+    margin-right: 10%;
+
+
+
+    &:nth-child(2){
+      margin-right: 0;
+    }
+  }
+
+  &__filter-title{
+    font-family: @font-family-bold;
+    color: @white;
+    font-size: @font-size-filter-title;
+    margin-bottom: 25px;
+  }
+
+  &__checkbox{
+    display: none;
+  }
+
+  &__checkbox:checked + label::before{
+    background: url("../img/sprite_png/checked.png");
+    opacity: 1;
+  }
+
+  &__checkbox:checked + label:hover::before{
+
+    opacity: .6;
+  }
+
+  &__checkbox:checked + label:active::before{
+
+    opacity: .3;
+  }
+
+  &__comfort-items{
+    padding-left: 40px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 25px;
+    color: @white;
+
+    &::before{
+      opacity: .3;
+    }
+
+    &:hover::before{
+      opacity: .6;
+    }
+
+    &:active::before{
+      opacity: 1;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+    
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: url("../img/sprite_png/unchecked.png");
+
+    }
+  }
+
+    &__filter-slider{
+      float: right;
+
+
+    }
+
+  &__price-slider{
+    border: 2px solid @white;
+    color: @white;
+    margin-bottom: 35px;
+  }
+
+  &__price-label{
+    padding-left: 50px;
+    line-height: 50px;
+
+    &--border{
+      border-left: 2px solid @white;
+    }
+  }
+  
+  &__price{
+    width: 65px;
+    background: transparent;
+    border: none;
+    color: @white;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  &__range-controls{
+    position: relative;
+    padding: 0 20px;
+  }
+  
+
+
+  &__scale{
+    height: 2px;
+    background: rgba(255,255,255,.4);
+
+  }
+
+  &__bar{
+    height: 2px;
+    background: @white;
+    width: 70%;
+  }
+
+  &__toggle{
+    position: absolute;
+    top: -11px;
+    left: 30px;
+    width: 4px;
+    height: 4px;
+    border: 10px solid @white;
+    background: @black;
+    cursor: pointer;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    
+    &:hover{
+      background: @light-blue;
+    }
+
+    &--min{
+      left: 5%;
+    }
+
+    &--max{
+      left: 65%;
+    }
+  }
+
+  &__result-row{
+    padding: 0 80px;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+  }
+
+  &__sort-bnt-wrap--left{
+    float: left;
+  }
+
+  &__sort-up-btn{
+    width: 9px;
+    height: 9px;
+    background: url("../img/sprite_png/sort-up.png") no-repeat center;
+    margin: 43px 8px 43px 0;
+  }
+
+  &__sort-down-btn{
+    width: 9px;
+    height: 9px;
+    background: url("../img/sprite_png/sort-down.PNG") no-repeat center;
+    margin: 43px 0;
+
+  }
+
+  &__sort-bnt-wrap--right{
+    float: right;
+  }
+
+  &__title{
+    font-size: @font-size-title;
+    color: @black;
+    line-height: 86px;
+    font-family: @font-family-bold;
+    display: inline-block;
+
+    &--line-height{
+      line-height:@line-height;
+
+      &:hover{
+        color: @light-blue;
+      }
+
+      &:active{
+        color: @active;
+      }
+    }
+  }
+
+  &__sort-by{
+    margin: 0 40px 0 45px;
+  }
+
+  &__sort-btn{
+    margin-right: 30px;
+    padding: 0;
+    border-bottom: 2px @light-blue dotted;
+    color: rgba(0,0,0,.3);
+
+    &:nth-child(5N){
+      margin-right: 0;
+    }
+
+    &:hover{
+      color: @light-blue;
+    }
+
+    &:active{
+      color: @black;
+      border-bottom: none;
+    }
+
+    &--active{
+      color: @light-blue;
+      border-bottom: none;
+    }
+  }
+
+  &__sort-btn:last-child{
+    margin-right:0;
+  }
+
+  &__result-item{
+    position: relative;
+    padding: 30px 80px 30px;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+  }
+
+  &__img-hotel{
+    height: 98px;
+  }
+
+  &__result-img-wrap{
+    float: left;
+    height: 98px;
+  }
+  
+  &__result-item-description{
+    float: left;
+    margin-left: 35px;
+  }
+
+  &__result-item-row-1{
+    display: block;
+  }
+
+
+
+  &__result-stars{
+    position: absolute;
+    right: 6.6%;
+    top: 30px;
+
+  }
+  
+  &__rating-icon{
+    display: inline-block;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    background: url("../img/sprite_png/star.png");
+  }
+
+
+  &__result-item-row-3{
+    width: 100%;
+  }
+  &__result-btn{
+    padding: 0 17px;
+    line-height: 27px;
+    text-align: center;
+    color: @white;
+    display: inline-block;
+    font-family: @font-family-bold;
+    float: left;
+    margin-right: 6px;
+    
+   
+
+    &:nth-child(2n){
+      margin: 0;
+    }
+
+    &--blue{
+      background: @light-blue;
+
+      &:hover{
+        background: @blue;
+        color: @white;
+      }
+      
+      &:active{
+        color: @active;
+      }
+      
+  }
+    &--brown{
+      background: @light-brown;
+
+
+      &:hover{
+        background: @brown;
+        color: @white;
+      }
+      
+      &:active{
+        color: @active;
+      }
+    }
+  }
+
+  &__result-rating{
+    position: absolute;
+    bottom: 30px;
+    right: 6.6%;
+  }
+
+  &__rating-box{
+    float: right;
+  }
+
+}
+
+.search-result {
+  &__type {
+    line-height: 43px;
+  }
+}
+
+
+/*
+tablet style
+*/
+
+
+@media ( max-width: 1280px) {
+
+  .inner-page{
+
+    &__result-row{
+      padding: 0 6.6%;
+    }
+
+    &__result-item{
+      padding: 30px 6.6%;
+    }
+
+
+  }
+
+}
+
+
+/*
+phone style
+*/
+
+
+@media(max-width: 768px) {
+
+  .inner-page{
+
+
+
+    &__container{
+      width: 100%;
+    }
+    
+    &__filter-group-wrap{
+      display: block;
+      margin-bottom: 40px;
+
+      &:first-child{
+        margin-right: 9%;
+      }
+    }
+
+    &__price-label{
+      padding-left: 20px;
+    }
+
+    &__price{
+      margin-right: 0;
+    }
+
+
+    &__result-row{
+      padding: 6.6%;
+    }
+
+    &__title{
+      display: block;
+      text-align: center;
+      position: static;
+    }
+
+    &__sort-by{
+      display: block;
+      margin-bottom: 15px;
+      text-align: center;
+      
+    }
+
+    &__result-item{
+      padding: 6.6%;
+    }
+
+    &__result-img-wrap{
+      float: none;
+      text-align: center;
+      height: auto;
+    }
+    
+    &__result-item-row-2{
+      text-align: center;
+    }
+
+
+    &__rating-box{
+      float: none;
+      text-align: center;
+    }
+
+    &__result-stars{
+      margin-top: 5px;
+      margin-bottom: 0;
+      position: static;
+    }
+
+    &__result-item-description{
+      margin-left: 0;
+      float: none;
+    }
+
+    &__img-hotel{
+      &--phone{
+        width: 278px;
+        height: 200px;
+      }
+    }
+
+    &__result-btn--blue{
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 0;
+      float: none;
+      padding: 14px 0;
+    }
+    
+    &__result-btn--brown{
+      display: block;
+      float: none;
+      padding: 14px 5px;
+    }
+
+    &__result-rating{
+      position: static;
+      padding: 0;
+      width: 100%;
+    }
+
+  }
+}
+
+
+
