@@ -2,11 +2,15 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Welcome to Sedona</title>
+        <title>Pink</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet/less" type="text/css" href="less/style.less">
+        <script  type="text/javascript" src="js/jquery.js"></script>
+
+        <script type="text/javascript" src="js/common.js"></script>
+
 
         <script src="less.js"></script>
     </head>
@@ -19,7 +23,7 @@
                 <div class="main-header__container">
                     <nav class="main-header__navigation">
                         <div class="main-header__logo">
-                            <a href="#" > <img src="img/pink-logo-footer-2@1x.png" width="145" height="40">
+                            <a href="#" > <img src="img/Pink-logo-2@1x.png" width="145" height="40">
                             </a>
                         </div>
                         <ul class="main-header__navigation-list ">
@@ -39,7 +43,7 @@
                                 </a>
                             </li>
                             <li class="main-header__list-item">
-                                <a  href="#">
+                                <a  href="#pricetag">
                                     Стоимость
                                 </a>
                             </li>
@@ -91,7 +95,7 @@
                             Устали от серости мегаполиса?
                         </p>
                         <p class="advantages__title">
-                            Нам есть, что вам
+                            Нам есть, что вам <br>
                             предложить!
                         </p>
                         <div class="advantages__wrap">
@@ -131,6 +135,164 @@
                             </div>
                         </section>
                         </div>
+                    </div>
+
+
+                    <div class="watch">
+                        <div class="watch__timer">
+                            24
+                        </div>
+                        <div class="watch__description-block">
+                            <h2 class="watch__description-title">
+                                Эффект
+                                на 24 часа!
+                            </h2>
+
+                            <p class="watch__description">
+                                Британские ученые провели исследования
+                                и доказали, что положительный эффект
+                                от использования приложения длится
+                                целые сутки!
+
+                            </p>
+
+                            <a href="#" class="watch__description-link">
+                                Узнать больше об исследовании
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="comments">
+                        <button class="comments__btn comments__btn--prev" type="button"></button>
+
+                        <div class="comments__sliderwrapper" data-current="0">
+                            <section class="comments__block comments__slider">
+                                <div class="comments__slider-item">
+                                    <p class="comments__text">
+                                        Это приложение перевернуло мой мир и позволило
+                                        по-новому взглянуть на привычные серые вещи!
+                                        А еще я познакомился со своей будущей женой
+                                        в комментариях к выложенной фотографии!
+                                    </p>
+
+                                    <h2 class="comments__author">
+                                        Николай Петров
+                                    </h2>
+                                    <span class="comments__about-author">
+                                        25 лет, водитель трамвая
+                                    </span>
+
+
+                                </div>
+                                <div class="comments__slider-item">
+                                    <p class="comments__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aspernatur iure provident quibusdam quod! Beatae cupiditate
+                                        dignissimos eius eum, labore magnam magni nihil possimus quia
+                                        soluta tempora tempore. Asperiores cupiditate, ex.
+                                    </p>
+
+                                    <h2 class="comments__author">
+                                        Виталий Серов
+                                    </h2>
+                                                        <span class="comments__about-author">
+                                                            13 лет, школьник
+                                                        </span>
+                                </div>
+                                <div class="comments__slider-item">
+                                    <p class="comments__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aspernatur iure provident quibusdam quod! Beatae cupiditate
+                                        dignissimos eius eum, labore magnam magni nihil possimus quia
+                                        soluta tempora tempore. Asperiores cupiditate, ex.
+                                    </p>
+
+                                    <h2 class="comments__author">
+                                        Александр Козлов
+                                    </h2>
+                                                        <span class="comments__about-author">
+                                                            50 лет, инженер
+                                                        </span>
+                                </div>
+                            </section>
+                            <ul class="comments__bullets"></ul>
+                        </div>
+
+                        <button class="comments__btn comments__btn--next" type="button"></button>
+
+                    </div>
+
+                    <div class="slider slider__comments-block">
+                        <form action="">
+                            <input type="radio" name="comments" id="comment1">
+                            <input type="radio" name="comments" id="comment2">
+                            <input type="radio" name="comments" id="comment3">
+                        </form>
+                    </div>
+
+
+                    <div class="cost" id="pricetag">
+                        <div class="cost__wrap">
+
+                            <section class="cost__row-names">
+
+                                <div class="cost__item-row cost__item-row--no-border">
+                                    Розовый фильтр
+                                </div>
+                                <div class="cost__item-row cost__item-row--no-border">
+                                    Смайлики
+                                </div>
+                                <div class="cost__item-row cost__item-row--no-border">
+                                    Комментарии
+                                </div>
+
+                            </section>
+
+                            <section class="cost__block">
+
+                                <div class="cost__item">
+                                    <div class="cost__item-header">
+                                        <span class="cost__header-title"> база</span>
+                                        <span class="cost__header-price"> 1,99 USD</span>
+                                    </div>
+                                    <div class="cost__item-row cost__item-row--yes"></div>
+                                    <div class="cost__item-row cost__item-row--no"></div>
+                                    <div class="cost__item-row cost__item-row--no"></div>
+                                </div>
+
+                                <div class="cost__item cost__item--active">
+                                    <div class="cost__item-header cost__item-header--hit">
+                                        <span class="cost__header-title"> стандарт</span>
+                                        <span class="cost__header-price"> 3,99 USD</span>
+                                    </div>
+                                    <div class="cost__item-row cost__item-row--yes"></div>
+                                    <div class="cost__item-row cost__item-row--yes"></div>
+                                    <div class="cost__item-row cost__item-row--no"></div>
+                                </div>
+
+                                <div class="cost__item">
+                                    <div class="cost__item-header">
+                                        <span class="cost__header-title"> анлим</span>
+                                        <span class="cost__header-price"> 9,99 USD</span>
+                                    </div>
+                                    <div class="cost__item-row cost__item-row--yes"></div>
+                                    <div class="cost__item-row cost__item-row--yes"></div>
+                                    <div class="cost__item-row cost__item-row--yes"></div>
+                                </div>
+
+                            </section>
+                    </div>
+
+
+                    </div>
+
+
+                    <div class="slider slider__cost-block">
+                        <form action="">
+                            <input type="radio" name="price" id="price1">
+                            <input type="radio" name="price" id="price2">
+                            <input type="radio" name="price" id="price3">
+                        </form>
                     </div>
 
 

@@ -24,6 +24,7 @@ mobile first
 
     &__navigation-list {
       padding: 0;
+      display: none;
 
 
 
@@ -99,6 +100,7 @@ tablet style
     &__navigation-list {
       padding: 0;
 
+
     }
 
     &__list-item{
@@ -131,6 +133,7 @@ tablet style
 
       &__navigation-list {
         display: flex;
+
       }
 
       &__icon-menu{
@@ -144,11 +147,12 @@ tablet style
 
         a {
           &:hover {
+            opacity: .6;
 
           }
 
           &:active {
-
+            opacity: .3;
           }
         }
 
@@ -156,12 +160,8 @@ tablet style
           a {
 
             &:hover {
-
+              opacity: 1;
               cursor: default;
-
-              &:active {
-
-              }
             }
           }
         }
@@ -171,7 +171,7 @@ tablet style
             opacity: .3;
             cursor: default;
             &:hover {
-
+              opacity: .3;
             }
           }
         }
