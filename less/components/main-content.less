@@ -1,0 +1,219 @@
+/*
+mobile first
+*/
+
+
+.main-container{
+  width: 100%;
+  min-width: 320px;
+}
+
+.promo{
+  padding: 30px 0;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: @menu-font-color;
+
+  &__background{
+    height: 400px;
+    width: 120%;
+    background:
+  url(/../img/iphone-hand-1.png) no-repeat center 100%,
+  url(/../img/promo_bg.jpg) no-repeat center;
+    margin-bottom: 30px;
+  }
+
+
+  &__title{
+    font-size: @h2-font-size;
+    font-family: @font-light;
+    padding: 0 10%;
+    text-align: center;
+    margin-bottom: 25px;
+
+  }
+
+  &__btn{
+    color: @menu-font-color;
+    padding: 12px 35px;
+    border: 2px solid @menu-font-color;
+    border-radius: 30px;
+    font-size: @h4-font-size;
+    font-family: @font-size-bold;
+    
+    &:hover{
+      color: #fff;
+    }
+
+    &--margin-bottom{
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__os-block{
+    display: flex;
+    align-items: center;
+
+    &--margin-bottom{
+      margin-bottom: 25px;
+    }
+  }
+
+  &__os-item{
+    margin-right: 35px;
+
+    &:last-child{
+      margin-right:0 ;
+    }
+  }
+
+  &__os-description{
+    text-align: center;
+  }
+
+}
+
+
+.advantages{
+
+  padding: 50px 3.2% 135px;
+  text-align: center;
+
+  &__title{
+    margin-bottom: 40px;
+    font-family: @font-size-bold;
+    font-size: @h2-font-size;
+
+    &:last-of-type{
+      margin-bottom: 120px;
+    }
+  }
+
+
+
+  &__wrap{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__item-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item{
+    margin-bottom: 40px;
+  }
+
+  &__item-img{
+    display: none;
+  }
+}
+
+@media ( min-width: 768px){
+
+
+
+  .promo{
+
+    max-width: 300px;
+    background: none;
+
+    &__promo-wrap{
+      background:
+              url(/../img/iphone-hand-1.png) no-repeat center 100%,
+              url(/../img/promo_bg.jpg) no-repeat center;
+    }
+
+    &__background{
+      display: none;
+    }
+  }
+  
+  .advantages{
+
+    &__wrap{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    /*  padding: 70px 13%;*/
+
+    }
+
+    &__title{
+      margin-bottom:0;
+      &:last-of-type{
+        margin-bottom: 20px;
+      }
+    }
+    
+    &__left-img{
+    }
+
+    &__item-group{
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+    }
+
+    &__item{
+      width: 250px;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    &__item-img{
+
+    }
+  }
+}
+
+
+@media ( min-width: 1200px){
+
+.promo{
+
+
+  &__promo-wrap{
+    padding:0 10.3%;
+  }
+
+
+}
+
+
+
+  .advantages{
+
+    &__left-img{
+      display: none;
+    }
+
+    &__item-group{
+
+      justify-content: space-between;
+      flex-direction: row;
+      margin-left: 0;
+
+    }
+
+    &__item{
+      flex-direction: row;
+      text-align: center;
+    }
+
+    &__item-title{
+      padding: 60px 0 30px;
+    }
+
+    &__item-img{
+      display: inline-flex;
+    }
+  }
+}
+

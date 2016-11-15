@@ -1,0 +1,155 @@
+/*
+mobile first
+*/
+
+.comments{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__item{
+    text-align: center;
+    margin-bottom:40px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__about-author{
+    display: none;
+  }
+
+  &__text{
+    width: 500px;
+  }
+
+
+
+}
+
+
+
+
+
+@media ( min-width: 768px) {
+
+  .comments{
+    padding: 50px 5.2% 110px;
+
+    &__item{
+      flex-direction: column;
+    }
+
+    &__text{
+      width: 600px;
+      font-size: @h4-font-size;
+      margin-bottom: 45px;
+    }
+
+    &__author{
+      font-size: @h3-fon-size;
+      line-height: @review-line-height;
+      margin-bottom:10px;
+    }
+    
+    &__about-author{
+      display: block;
+    }
+
+
+
+  }
+
+}
+
+
+
+@media ( min-width: 1200px) {
+
+
+  .comments{
+
+  &__slider-box{
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+
+    &__slider{
+      position: relative;
+      width: 10000px;
+      height: 300px;
+    }
+
+    &__slider-item{
+      float: left;
+    }
+    
+    &__btn{
+      position: absolute;
+      box-sizing: padding-box;
+      padding: 30px;
+      top: 85px;
+      width: 25px;
+      height: 25px;
+      background: url("../img/left-btn-icon.png") no-repeat center;
+
+      &--prev{
+        left: 180px;
+      }
+
+      &--next{
+        right: 180px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    
+    &__bullets{
+      position: absolute;
+      bottom:10px;
+      left: 130px;
+      height: 11px;
+      
+      &li{
+        width: 11px;
+        height: 11px;
+        margin-bottom: 5px;
+        background: red;
+        
+        &.active{
+          background: green;
+        }
+      }
+    }
+    
+    
+    
+  }
+
+    &__text{
+
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+
+
+    &__author{
+      margin-bottom: 20px;
+    }
+
+}
+
+
+

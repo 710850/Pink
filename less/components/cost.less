@@ -1,0 +1,168 @@
+/*
+mobile first
+*/
+
+
+.cost{
+  padding: 50px 20px;
+
+  &__wrap{
+    position: relative;
+  }
+
+  &__row-names{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    top: 80px;
+    left: 20px;
+  }
+
+  &__block{
+    display: flex;
+  }
+
+  &__item{
+    width: 100%;
+    display: none;
+
+    &--active{
+      display: block;
+    }
+
+  }
+
+  &__item-header{
+    border: 1px solid @border-color;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: @table-header-color;
+    color: @menu-font-color;
+    text-transform: @uppercase;
+
+    &--hit{
+      position: relative;
+
+      &:before{
+        content: '';
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../img/hit.png) no-repeat center;;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__item-row{
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+
+    &--yes{
+      background: url(../img/yes.png) no-repeat 95% 50%;
+    }
+    &--no{
+      background: url(../img/no.png) no-repeat 95% 50%;
+
+    }
+
+    &--no-border{
+      border: none;
+      text-align: left;
+
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+@media ( min-width: 768px) {
+
+  .cost{
+    display: flex;
+    justify-content: center;
+
+    &__wrap{
+      display: flex;
+    }
+
+    &__row-names{
+      position: static;
+    }
+
+    &__item{
+      display: block;
+    }
+
+
+
+    &__item-row{
+
+      width: 150px;
+
+      &--yes{
+        background: url(../img/yes.png) no-repeat center;
+      }
+      &--no{
+        background: url(../img/no.png) no-repeat center;
+      }
+    }
+
+  }
+
+}
+
+
+@media ( min-width: 1200px) {
+
+  .cost {
+
+    &__item-header {
+      width: 230px;
+      height: 100px;
+
+      &--hit {
+        position: relative;
+
+        &:before {
+
+          width: 72px;
+          height: 72px;
+
+        }
+      }
+
+    }
+
+    &__item-row {
+      width: 230px;
+      height: 60px;
+
+      &--no-border{
+        border: none;
+
+
+      }
+    }
+
+
+  }
+}
+
+

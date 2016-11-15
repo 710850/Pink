@@ -1,0 +1,123 @@
+/*
+mobile first
+*/
+
+
+
+
+.promo{
+  padding: 30px 0;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: @menu-font-color;
+
+  &__background{
+    height: 400px;
+    width: 120%;
+    background:
+            url(/../img/iphone-hand-1.png) no-repeat center 100%,
+            url(/../img/promo_bg.jpg) no-repeat center;
+    margin-bottom: 30px;
+  }
+
+
+  &__title{
+    font-size: @h2-font-size;
+    font-family: @font-light;
+    padding: 0 10%;
+    text-align: center;
+    margin-bottom: 25px;
+
+  }
+
+  &__btn{
+    color: @menu-font-color;
+    padding: 12px 35px;
+    border: 2px solid @menu-font-color;
+    border-radius: 30px;
+    font-size: @h4-font-size;
+    font-family: @font-size-bold;
+
+    &:hover{
+      color: #fff;
+      opacity: .6;
+    }
+    &:active{
+      opacity: .3;
+    }
+
+    &--margin-bottom{
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__os-block{
+    display: flex;
+    align-items: center;
+
+    &--margin-bottom{
+      margin-bottom: 25px;
+    }
+  }
+
+  &__os-item{
+    margin-right: 35px;
+
+    &:hover{
+      -webkit-transform: scale(1.2,1.2);
+      -moz-transform: scale(1.2,1.2);
+      -ms-transform: scale(1.2,1.2);
+      -o-transform: scale(1.2,1.2);
+      transform: scale(1.2,1.2);
+    }
+
+    &:last-child{
+      margin-right:0 ;
+    }
+  }
+
+  &__os-description{
+    text-align: center;
+  }
+
+}
+
+
+
+@media ( min-width: 768px){
+
+
+
+  .promo{
+
+    max-width: 302px;
+    background: none;
+
+    &__promo-wrap{
+      background:
+              url(/../img/iphone-hand-1.png) no-repeat center 100%,
+              url(/../img/promo_bg.jpg) no-repeat center;
+    }
+
+    &__background{
+      display: none;
+    }
+  }
+
+}
+
+
+@media ( min-width: 1200px){
+
+  .promo{
+
+    &__promo-wrap{
+      padding:0 10.3%;
+    }
+  }
+
+}
+
