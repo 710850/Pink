@@ -3,6 +3,7 @@ mobile first
 */
 
   .main-footer{
+    display: none;
 
     padding: 20px 0;
     height: auto;
@@ -14,21 +15,26 @@ mobile first
     }
 
     &__logo{
-      height: 48px;
+      width: 146px;
+      height: 40px;
       font-family: @font-regular;
-      font-size: @h2-font-size;
+      font-size:0;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
+      background: url("../img/pink-logo-footer-2.png") no-repeat 0 100%;
 
-      a:hover {
-        color: @icon-active-color;
+
+      &:hover {
+        background: url("../img/Pink-logo-footer-3.png") no-repeat 0 100% ;
       }
 
-      a:active {
-        color: @icon-active-color;
+      &:active{
+        opacity:.3;
       }
+
+
     }
 
     &__social-section{

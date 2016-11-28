@@ -1,24 +1,27 @@
 $(document).ready(function(){
-    var slideWidth=300;
-    var sliderTimer;
-    $(function(){
-        $('.comment__slidewrapper').width($('.comment__slidewrapper').children().size()*slideWidth);
-        sliderTimer=setInterval(nextSlide,1000);
-        $('.viewport').hover(function(){
-            clearInterval(sliderTimer);
-        },function(){
-            sliderTimer=setInterval(nextSlide,1000);
-        });
+
+
+    $("#price1").click(function(){
+        $(".cost__slider-inner").stop().animate({
+            left: "0"
+        }, 600)
     });
 
-    function nextSlide(){
-        var currentSlide=parseInt($('.comment__slidewrapper').data('current'));
-        currentSlide++;
-        if(currentSlide>=$('.comment__slidewrapper').children().size())
-        {
-            currentSlide=0;
-        }
-        $('.slidewrapper').animate({left: -currentSlide*slideWidth},300).data('current',currentSlide);
-    }
+
+    $("#price2").click(function(){
+        $(".cost__slider-inner").stop().animate({
+            left: "-100%"
+        }, 600)
+    });
+
+
+
+    $("#price3").click(function(){
+        $(".cost__slider-inner").stop().animate({
+            left: "-200%"
+        }, 600)
+    });
+
+
 });
 

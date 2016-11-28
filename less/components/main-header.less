@@ -4,8 +4,22 @@ mobile first
 
   .main-header {
 
+
+
     background: @menu-bg-color;
 
+
+    &__logo > a{
+      display: block;
+      width: 145px;
+      height: 60px;
+
+      background: url("../img/logo-min.png") no-repeat center;
+
+      &:hover{
+        background: url("../img/pink-logo-min.png") no-repeat center;
+      }
+    }
 
     &__container{
       width: 100%;
@@ -20,22 +34,29 @@ mobile first
       border: none;
       background: transparent;
       fill: @menu-font-color;
+
+      &--close{
+        display: none;
+      }
+
+      &:hover{
+        fill: @icon-regular-color;
+      }
+
+      &:active{
+        opacity: .6;
+      }
     }
 
     &__navigation-list {
       padding: 0;
       display: none;
 
-
-
       li {
-
-
-
-
 
         a {
           color: @menu-font-color;
+          font-family: @font-size-bold;
           line-height: 55px;
         }
       }
@@ -47,38 +68,63 @@ mobile first
       background: @menu-bg-color;
       text-align: center;
       border-top: 1px solid @border-color;
+      text-transform: uppercase;
+
+      &:hover{
+        a{
+          color: @link-regular-color;
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+
 
       &:last-of-type{
         margin-right:0;
       }
 
 
-          a{
-            color: @icon-regular-color;
-          }
-   
-      }
-
       &--active-link {
-        &:hover {
-          a {
-            color: @menu-font-color;
+
+        &:hover{
+         a{
+           color: @icon-bg-color;
+         }
+        }
+        a {
+          &:hover {
+            opacity: 1;
+            cursor: default;
+
           }
         }
       }
 
-      &--na{
-        &:hover {
+      &--na {
 
-          a {
+        &:hover{
+          a{
+            color: @icon-bg-color;
+          }
+        }
 
-
-            &:active {
-
-            }
+        a {
+          opacity: .3;
+          cursor: default;
+          &:hover {
+            opacity: .3;
           }
         }
       }
+    }
+
+
+
+
+
+
+
 
     }
 
@@ -104,6 +150,8 @@ tablet style
     }
 
     &__list-item{
+
+
       &:last-child{
         margin-right:0;
       }
@@ -127,55 +175,81 @@ tablet style
 
       }
 
-      &__logo{;
-
+      &__logo > a{
+        display: block;
+        width: 145px;
+        height: 40px;
+        
+        background: url("../img/Pink-logo-2@1x.png") no-repeat center;
+        
+        &:hover{
+          background: url("../img/pink_logo2.png");
+        }
       }
 
       &__navigation-list {
-        display: flex;
+        display: flex!important;
 
       }
 
       &__icon-menu{
-        display: none;
+        display: none!important;
       }
 
       &__list-item {
-        margin-right: 60px;
-        border: none;
+          margin-right: 60px;
+          border: none;
+        text-transform: capitalize;
 
+        &:hover{
 
-        a {
-          &:hover {
-            opacity: .6;
+          border-bottom: 2px solid @icon-bg-color;
+          height: 53px;
 
+          a{
+            color: @icon-bg-color;
           }
+        }
 
-          &:active {
+
+        &:active{
+
+          border-bottom: none;
+          a{
             opacity: .3;
           }
         }
 
-        &--active-link {
-          a {
 
-            &:hover {
-              opacity: 1;
-              cursor: default;
+          &--active-link {
+
+            &:hover{
+              border-bottom: none;
+            }
+
+            a {
+
+              &:hover {
+                opacity: 1;
+                cursor: default;
+              }
             }
           }
-        }
 
-        &--na {
-          a {
-            opacity: .3;
-            cursor: default;
-            &:hover {
+          &--na {
+
+            &:hover{
+              border-bottom: none;
+            }
+            a {
               opacity: .3;
+              cursor: default;
+              &:hover {
+                opacity: .3;
+              }
             }
           }
         }
-      }
 
          }
   }

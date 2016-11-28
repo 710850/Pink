@@ -46,7 +46,12 @@ table {
     border-spacing: 0;
 }
 
-a, a:hover{text-decoration: none}
+a, a:hover, a:focus{
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+
+}
 
 a, a:hover, input, textarea, button, input:active, textarea:active, :focus {
 	 color: #000;

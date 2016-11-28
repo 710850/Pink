@@ -9,11 +9,12 @@ mobile first
 
   &__title{
     margin-bottom: 40px;
-    font-family: @font-size-bold;
+    font-family: @font-regular;
     font-size: @h2-font-size;
 
+
     &:last-of-type{
-      margin-bottom: 120px;
+      margin-bottom: 80px;
     }
   }
 
@@ -33,11 +34,15 @@ mobile first
 
   &__text{
     max-width: 400px;
+    margin-bottom: 35px;
   }
 
-  &__item{
-    margin-bottom: 40px;
+  &__item-title{
+    font-size: @h4-font-size;
+    font-family: @font-size-bold;
+    margin-bottom: 15px;
   }
+
 
   &__item-img{
     display: none;
@@ -61,11 +66,13 @@ mobile first
       font-size: @big-font-size;
       line-height:@big-line-height;
       &:last-of-type{
-        margin-bottom: 20px;
+        margin-bottom: 70px;
       }
     }
     
     &__left-img{
+      width: 268px;
+      height: 485px;
     }
 
     &__item-group{
@@ -84,9 +91,12 @@ mobile first
       }
     }
 
-    &__item-img{
+    &__item-title{
 
+      font-family: @font-size-bold;
     }
+
+
   }
 }
 
@@ -104,16 +114,22 @@ mobile first
       justify-content: space-between;
       flex-direction: row;
       margin-left: 0;
+      align-items: flex-start;
 
     }
 
     &__item{
       flex-direction: row;
       text-align: center;
+
+      &:last-of-type{
+        margin-bottom:40px;
+      }
     }
 
     &__item-title{
-      padding: 60px 0 30px;
+      padding: 60px 40px 30px;
+      font-size: @h1-font-size;
     }
 
     &__item-img{
